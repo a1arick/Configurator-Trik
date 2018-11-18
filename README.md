@@ -1,1 +1,1 @@
-# Configurator-Trik-
+# Configurator-Trik
