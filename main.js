@@ -85,7 +85,7 @@ const app2 = new Vue({
         accelerometer: "OFF"
     },
     methods: {
-        getHTTPS2() {
+        getHTTPS() {
             window.location.href = `https://google.com/s1=${this.s1}/s2=${this.s2}/s3=${this.s3}/s4=${this.s4}/s5=${this.s5}/s6=${this.s6}/m1=${this.m1}/m2=${this.m2}/m3=${this.m3}/m4=${this.m4}/a1=${this.a1}/a2=${this.a2}/a3=${this.a3}/a4=${this.a4}/a5=${this.a5}/a6=${this.a6}/e1=${this.e1}/e2=${this.e2}/e3=${this.e3}/e4=${this.e4}/d1=${this.d1}/d2=${this.d2}/d3=${this.d3}/video1=${this.video1}/video2=${this.video2}`
         },
         changeLang(lang) {
