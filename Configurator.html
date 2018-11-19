@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8">
@@ -21,6 +21,11 @@
         }
         .logoF {
             width: 25px;
+        }
+        .layer2 {
+            position: relative; /* Абсолютное позиционирование */
+            bottom: 15%; /* Положение от нижнего края */
+            line-height: 100%;
         }
     </style>
 
@@ -67,8 +72,10 @@
         <div class="tab-pane fade show active active" id="home">{{ texts[lang]['develop'] }}</div>
         <div class="tab-pane fade" id="wifi">{{ texts[lang]['develop'] }}</div>
         <div class="tab-pane fade" id="port">
+
+                <button type="button" class="btn btn-secondary layer2 main-color-green" v-on:click="defaultPorts">{{ texts[lang]['default'] }}</button>
                 <!--ServoMotor-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 10px">
                     <a class="navbar-brand" href="#">ServoMotor</a>
                 </nav>
                 <div class="row">
@@ -372,6 +379,7 @@
                 </button>
         </div>
         <div class="tab-pane fade" id="ga">
+            <button type="button" class="btn btn-secondary layer2 main-color-green" v-on:click="defaultGA">{{ texts[lang]['default'] }}</button>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>{{ texts[lang]['gyroscope'] }}</label>

@@ -1,33 +1,6 @@
 const app2 = new Vue({
     el: '#app',
     data: {
-        settings: {
-            s1: null,
-            s2: null,
-            s3: null,
-            s4: null,
-            s5: null,
-            s6: null,
-            m1: null,
-            m2: null,
-            m3: null,
-            m4: null,
-            a1: null,
-            a2: null,
-            a3: null,
-            a4: null,
-            a5: null,
-            a6: null,
-            e1: null,
-            e2: null,
-            e3: null,
-            e4: null,
-            d1: null,
-            d2: null,
-            d3: null,
-            video1: null,
-            video2: null,
-        },
         texts: {
             'ru': {
                 'configurator': 'Конфигуратор',
@@ -39,7 +12,8 @@ const app2 = new Vue({
                 'menu': 'Меню',
                 'save': 'Сохранить',
                 'en': 'Англ',
-                'ru': 'Рус'
+                'ru': 'Рус',
+                'default' : 'Станадартные настройки'
 
             },
             'en': {
@@ -52,7 +26,8 @@ const app2 = new Vue({
                 'menu': 'Menu',
                 'save': 'Save',
                 'en': 'En',
-                'ru': 'Ru'
+                'ru': 'Ru',
+                'default' : 'Default settings'
             }
         },
         lang: 'en',
@@ -93,6 +68,38 @@ const app2 = new Vue({
         },
         getHTTPS1() {
             window.location.href = `https://google.com/gyroscope=${this.gyroscope}/accelerometer=${this.accelerometer}`
+        },
+        defaultPorts () {
+            this.s1 = "angularServomotor";
+            this.s2 = "angularServomotor";
+            this.s3 = "angularServomotor";
+            this.s4 = "angularServomotor";
+            this.s5 = "angularServomotor";
+            this.s6 = "angularServomotor";
+            this.m1 = "motor350";
+            this.m2 = "motor350";
+            this.m3 = "motor350";
+            this.m4 = "motor350";
+            this.a1 = "sharpGP2Sensor";
+            this.a2 = "sharpGP2Sensor";
+            this.a3 = "sharpGP2Sensor";
+            this.a4 = "sharpGP2Sensor";
+            this.a5 = "sharpGP2Sensor";
+            this.a6 = "sharpGP2Sensor";
+            this.e1 = "encoder95";
+            this.e2 = "encoder95";
+            this.e3 = "encoder95";
+            this.e4 = "encoder95";
+            this.d1 = "sonarSensor";
+            this.d2 = "sonarSensor";
+            this.d3 = "volumeSensor";
+            this.video1 = "colorSensor3x3";
+            this.video2 = "colorSensor3x3";
+        },
+        defaultGA () {
+            this.gyroscope = "ON";
+            this.accelerometer = "ON";
         }
+
     }
 });
